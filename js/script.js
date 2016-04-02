@@ -12,12 +12,12 @@
 
 //DEEP COMPARING
 var x = {
-  name: "ktos",
-  dwa: "cos"
+  name: "name",
+  surname: "something"
 }
 var y = {
-  name: "ktos",
-  dwa: "cos"
+  name: "name",
+  surname: "something"
 }
 var dlugosca = 0;
 var dlugoscb = 0;
@@ -28,10 +28,10 @@ function deepEqual(a, b) {
     liczeniewlasnosci(a, b);
   }
   else if (a !== b) {
-    console.log("podane argumenty nie sa rowne");
+    console.log("arguments are not equal");
   }
   else {
-    console.log("podane argumenty sa rowne");
+    console.log("arguments are equal");
   }
 }
 
@@ -47,7 +47,7 @@ function liczeniewlasnosci(a, b) {
     }
   }
   if (dlugosca != dlugoscb) {
-    console.log("liczba wlasnosci nie jest rowna");
+    console.log("the numbers of properties are the same");
   } else {
     console.log(sprawdzaniewartosci(a, b));
   }
@@ -56,14 +56,14 @@ function sprawdzaniewartosci(a, b) {
 
   for (var i in a) {
     if (a[i] !== b[i]) {
-      return ("wartosci nie sa rowne");
+      return ("value of properties is not the same");
 
     }
     else {
       sprawdzaniewartosci(a[i++], b[i++]);
     }
   }
-  return ("wartosci sa rowne");
+  return ("DEEP COMPARING IS OK");
 }
 
 deepEqual(x, y);
