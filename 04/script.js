@@ -14,17 +14,17 @@
 var x = {
   name: "name",
   surname: "something"
-}
+};
 var y = {
   name: "name",
   surname: "something"
-}
+};
 var dlugosca = 0;
 var dlugoscb = 0;
 
 function deepEqual(a, b) {
 
-  if (typeof a == "object" && a != null && typeof b == "object" && b != null)  {
+  if (typeof a == "object" && a !== null && typeof b == "object" && b !== null)  {
     liczeniewlasnosci(a, b);
   }
   else if (a !== b) {
